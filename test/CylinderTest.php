@@ -20,7 +20,6 @@ class CylinderTest extends TestCase
         $radius = 0;
         $height = 0;
         $expected = 0;
-
         $cylinder = new Cylinder();
         $result = $cylinder->getVolume($radius, $height);
         $this->assertEquals($expected, $result);

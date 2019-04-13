@@ -8,11 +8,17 @@
  */
 class Cylinder
 {
-    public function getVolume($radius, $height)
-    {
-        $baseArea = pi() * $radius * $radius;
-        $perimeter = 2 * pi() * $radius;
-        $volume = $perimeter * $height + 2 * $baseArea;
+    public function getCircleS($radius){
+        $CircleS = $radius*$radius*pi();
+        return $CircleS ;
+    }
+    public function getCylinderS($radius,$height){
+        $CylinderS =  $radius*pi()*2*$height;
+        return $CylinderS;
+    }
+    public function getVolume($radius, $height){
+        $CircleS = $this->getCircleS($radius);
+        $volume = $CircleS * $height ;
         return $volume;
     }
 }
